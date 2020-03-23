@@ -8,7 +8,7 @@ Przeglądając rekursywnie drzewo katalogowe, zaczynające się od {user.home}/T
 TPO1res.txt winno być UTF-8.
 
 Poniższy gotowy fragment winien wykonać całą robotę:
-
+```
       public class Main {
         public static void main(String[] args) {
           String dirName = System.getProperty("user.home")+"/TPO1dir";
@@ -16,7 +16,7 @@ Poniższy gotowy fragment winien wykonać całą robotę:
           Futil.processDir(dirName, resultFileName);
         }
       }
-
+```
 Uwagi:
 
 1. pliku Main.java nie wolno w żaden sposób modyfikować,
