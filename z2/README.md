@@ -8,7 +8,9 @@ Napisać aplikację, udostępniającą GUI, w którym po podanu miasta i nazwy k
 - Informacje o kursie wymiany walutu kraju wobec podanej przez uzytkownika waluty.
 - Informacje o kursie NBP złotego wobec tej waluty podanego kraju.
 - Strona wiki z opisem miasta.
+```
 
+```
 - w p. 1 użyć serwisu api.openweathermap.org,
 - w p. 2 - serwisu exchangeratesapi.io,
 - w p. 3 - informacji ze stron NBP: http://www.nbp.pl/kursy/kursya.html i http://www.nbp.pl/kursy/kursyb.html.
@@ -33,4 +35,5 @@ public class Main {
 }
 ```
 Uwaga 1: zdefiniowanie pokazanych metod w sposób niezalezny od GUI jest obowiązkowe.
+
 Uwaga 2:  W katalogu projektu (np. w podkatalogu lib) nalezy umiescic wykorzystywane JARy (w przeciwnym razie program nie przejdzie kompilacji) i skonfigurowac Build Path tak, by wskazania na te JARy byly w Build Path zawarte.
