@@ -9,7 +9,6 @@ Napisać aplikację, udostępniającą GUI, w którym po podanu miasta i nazwy k
 - Informacje o kursie NBP złotego wobec tej waluty podanego kraju.
 - Strona wiki z opisem miasta.
 ```
-
 ```
 - w p. 1 użyć serwisu api.openweathermap.org,
 - w p. 2 - serwisu exchangeratesapi.io,
