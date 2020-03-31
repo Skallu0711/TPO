@@ -6,25 +6,13 @@
 
 package zad1;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.GridLayout;
-import java.awt.Point;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
-import javafx.scene.Group;
-import javafx.scene.Scene;
+import javafx.scene.*;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
@@ -35,12 +23,9 @@ public class Main {
     Double rate1 = s.getRateFor("USD");
     Double rate2 = s.getNBPRate();
 
-    SwingUtilities.invokeLater(new Runnable() {
-      @Override
-      public void run() {
-        initAndShowGUI(s);
-      }
-    });
+    // część uruchamiająca GUI
+    SwingUtilities.invokeLater(() -> initAndShowGUI(s));
+
   }
 
   private static void initAndShowGUI(Service frameService) {
@@ -64,20 +49,21 @@ public class Main {
     JLabel label2 = new JLabel("");
     JLabel label3 = new JLabel("");
 
-    enterButton.addActionListener(new ActionListener() {
-      public void actionPerformed(ActionEvent e) {
+    enterButton.addActionListener(e -> {
 
-        label1.setText("Your currency in " + text.getText().toUpperCase() + ":");
-        try {
-          label1.setForeground(Color.BLACK);
-          label2.setText("" + frameService.getRateFor(text.getText().toUpperCase()));
-        } catch(Exception e1) {
-          label1.setForeground(Color.RED);
-          label1.setText("Invalid currency!");
-          label2.setText("");
-        }
-        currency.repaint();
+      label1.setText("Your currency in " + text.getText().toUpperCase() + ":");
+
+      try {
+        label1.setForeground(Color.BLACK);
+        label2.setText("" + frameService.getRateFor(text.getText().toUpperCase()));
+
+      } catch(Exception e1) {
+        label1.setForeground(Color.RED);
+        label1.setText("Invalid currency!");
+        label2.setText("");
       }
+
+      currency.repaint();
     });
 
     currency.add(enterButton);
@@ -99,12 +85,8 @@ public class Main {
     frame.setResizable(false);
     frame.pack();
 
-    Platform.runLater(new Runnable() {
-      @Override
-      public void run() {
-        initFX(fxPanel, frameService.getCity());
-      }
-    });
+    Platform.runLater(() -> initFX(fxPanel, frameService.getCity()));
+
   }
 
   private static void initFX(JFXPanel fxPanel, String city) {
@@ -116,5 +98,8 @@ public class Main {
     group.getChildren().add(webView);
     WebEngine webEngine = webView.getEngine();
     webEngine.load("https://en.wikipedia.org/wiki/" + city);
+
   }
+
 }
+

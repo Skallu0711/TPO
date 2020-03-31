@@ -1,7 +1,6 @@
-# TPO_1
+# TPO_1 : "Kanały plikowe"
 
 # Tresc zadania:
-Zadanie: kanały plikowe
 
 Katalog {user.home}/TPO1dir  zawiera pliki tekstowe umieszczone w różnych podkatalogach. Kodowanie plików to Cp1250.
 Przeglądając rekursywnie drzewo katalogowe, zaczynające się od {user.home}/TPO1dir,  wczytywać te pliki i dopisywać ich zawartości do pliku o nazwie TPO1res.txt, znadującym się w katalogu projektu. Kodowanie pliku

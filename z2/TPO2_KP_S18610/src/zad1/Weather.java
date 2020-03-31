@@ -1,6 +1,6 @@
 package zad1;
 
-import org.json.*;
+import org.json.JSONObject;
 
 public class Weather {
 
@@ -46,14 +46,27 @@ public class Weather {
         tmp = tmp.replaceAll("[}]", ",");
         tmp = tmp.substring(0, tmp.indexOf(","));
         wind = Double.parseDouble(tmp);
+
     }
 
     public String getHTML() {
-        return "<html>Weather for " + city + ", " + country + ":" + "<br>Description: " + weatherDesc + "<br>Temprature: " + temp + " °C" + "<br>Humidity: " + humidity + "%" + "<br>Pressure: " + pressure + " hPa" + "<br>Wind speed: " + wind + " m/s</html>";
+        return "<html>Weather for " + city + ", " + country + ":" +
+                "<br>Description: " + weatherDesc +
+                "<br>Temprature: " + temp + " °C" +
+                "<br>Humidity: " + humidity + "%" +
+                "<br>Pressure: " + pressure + " hPa" +
+                "<br>Wind speed: " + wind + " m/s</html>";
+
     }
 
     public String toString() {
-        return "Description: " + weatherDesc + "\nTemprature: " + temp + " °C\n" + "Humidity: " + humidity + "%" + "\nPressure: " + pressure + " hPa" + "\nWind speed: " + wind + " m/s";
+        return "Description: " + weatherDesc +
+                "\nTemprature: " + temp + " °C\n" +
+                "Humidity: " + humidity + "%" +
+                "\nPressure: " + pressure + " hPa" +
+                "\nWind speed: " + wind + " m/s";
+
     }
 
 }
+

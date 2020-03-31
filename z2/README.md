@@ -1,7 +1,6 @@
-# TPO_2
+# TPO_2 : "Klienci usług sieciowych"
 
 # Tresc zadania:
-Zadanie: klienci usług sieciowych
 
 Napisać aplikację, udostępniającą GUI, w którym po podanu miasta i nazwy kraju pokazywane są:
 - Informacje o aktualnej pogodzie w tym mieście.
