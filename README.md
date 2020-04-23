@@ -1,5 +1,5 @@
 # TPO
-Distributed Programming Technologies
+PJWSTK : Distributed Programming Technologies
 
 #  Table of Contents:
 
