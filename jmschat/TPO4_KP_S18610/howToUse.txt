@@ -1,0 +1,18 @@
+URUCHOMIENIE SERWERA:
+1. w jms/bin uruchamiamy admin.bat
+2. jezeli mamy ustawione zmienne srodowiskowe, to zostanie uruchomiony server
+3. nastepnie pojawi się panel administratora, w ktorym nalezy wystartowac openJMS i ustawic connection na online
+"Actions" -> "Start OpenJMS"
+"Actions" -> "Connection" -> "Online"
+
+URUCHOMIENIE PROGRAMU:
+1. otwieramy projekt i sprawdzamy, czy sciezki bibliotek w strukturze projektu, sa prawidlowe, jezeli nie, to nalezy je usunac i dodac ponownie.
+2. nalezy upewnic sie, czy w folderze bin znajduje sie plik "jndi.properties", jezeli nie, to nalezy go tam dodac (w razie potrzeby zostawiam go w folderze resources)
+2. uruchamiamy ChatOne i wspisujemy dane pierwszego uzytkownika
+3. urcuchamiamy ChatTwo i wpisujemy dane drugiego uzytkownika
+4. mozna dodac wiecej uzytkowników dodajac nowe konfiguracje i odpalajac je po sobie
+
+KORZYSTANIE Z PROGRAMU:
+1. jezeli uzytkownik wpisze swoj username, to zostanie wyswietlona informacja : username + " joined the chat!"
+2. jezeli uzytkownik napisze cos na chacie, zostanie to wyswietlone jemu i pozostalym uzytkownikom
+3. jezeli uzytkownik wpisze "exit" zostanie on wylogowany: username + " left the chat :("
